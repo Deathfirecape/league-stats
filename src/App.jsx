@@ -124,7 +124,7 @@ function App() {
   useEffect(() => {
     async function fetchChamps() {
       const res = await fetch(
-        "http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json"
+        "https://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json"
       );
       const data = await res.json();
       setChampionsData(data);
@@ -313,7 +313,7 @@ const ChampDialog = ({ open, setOpen, keyProp, valueProp }) => {
           </IconButton>
         </div>
         <img
-          src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${keyProp}_0.jpg`}
+          src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${keyProp}_0.jpg`}
           width={900}
           style={{ maxWidth: "100%" }}
         />
@@ -360,7 +360,7 @@ const Image = ({ keyProp }) => {
         />
       )}
       <img
-        src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${keyProp}_0.jpg`}
+        src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${keyProp}_0.jpg`}
         alt={keyProp}
         onLoad={() => setCoverLoaded(true)}
         className={classes.imageItem}
